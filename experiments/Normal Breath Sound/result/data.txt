@@ -5,568 +5,568 @@ End time = 0.128000
 ASEd = 3.266100 
 Ti= -1.659320 
 ------------- New Frame : 2----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=0.128000 
+End time = 0.256000 
 ASEd = 1.685700 
 Ti= -0.736120 
 ------------- New Frame : 3----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=0.256000 
+End time = 0.384000 
 ASEd = 1.023230 
 Ti= -0.999390 
 ------------- New Frame : 4----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=0.384000 
+End time = 0.512000 
 ASEd = 1.831800 
 Ti= -1.440010 
 ------------- New Frame : 5----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=0.512000 
+End time = 0.640000 
 ASEd = 1.509930 
 Ti= -2.016360 
 ------------- New Frame : 6----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=0.640000 
+End time = 0.768000 
 ASEd = 1.019130 
 Ti= -1.301460 
 ------------- New Frame : 7----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=0.768000 
+End time = 0.896000 
 ASEd = 1.801620 
 Ti= -1.189350 
 ------------- New Frame : 8----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=0.896000 
+End time = 1.024000 
 ASEd = 1.670710 
 Ti= -1.687430 
 ------------- New Frame : 9----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=1.024000 
+End time = 1.152000 
 ASEd = 1.415640 
 Ti= -1.980190 
 ------------- New Frame : 10----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=1.152000 
+End time = 1.280000 
 ASEd = 1.642840 
 Ti= -1.482540 
 ------------- New Frame : 11----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=1.280000 
+End time = 1.408000 
 ASEd = 3.586960 
 Ti= -1.365620 
 ------------- New Frame : 12----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=1.408000 
+End time = 1.536000 
 ASEd = 1.567670 
 Ti= -1.481900 
 ------------- New Frame : 13----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=1.536000 
+End time = 1.664000 
 ASEd = 1.282760 
 Ti= -1.417260 
 ------------- New Frame : 14----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=1.664000 
+End time = 1.792000 
 ASEd = 3.164130 
 Ti= -1.756500 
 ------------- New Frame : 15----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=1.792000 
+End time = 1.920000 
 ASEd = 1.754950 
 Ti= -1.589950 
 ------------- New Frame : 16----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=1.920000 
+End time = 2.048000 
 ASEd = 2.689490 
 Ti= -1.353310 
 ------------- New Frame : 17----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=2.048000 
+End time = 2.176000 
 ASEd = 2.617270 
 Ti= -0.754810 
 ------------- New Frame : 18----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=2.176000 
+End time = 2.304000 
 ASEd = 1.835720 
 Ti= -1.533250 
 ------------- New Frame : 19----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=2.304000 
+End time = 2.432000 
 ASEd = 1.737430 
 Ti= -1.882320 
 ------------- New Frame : 20----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=2.432000 
+End time = 2.560000 
 ASEd = 3.588110 
 Ti= -0.646710 
 ------------- New Frame : 21----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=2.560000 
+End time = 2.688000 
 ASEd = 1.024490 
 Ti= -1.990600 
 ------------- New Frame : 22----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=2.688000 
+End time = 2.816000 
 ASEd = 1.138270 
 Ti= -0.912990 
 ------------- New Frame : 23----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=2.816000 
+End time = 2.944000 
 ASEd = 3.243630 
 Ti= -1.688580 
 ------------- New Frame : 24----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=2.944000 
+End time = 3.072000 
 ASEd = 1.639420 
 Ti= -1.113240 
 ------------- New Frame : 25----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=3.072000 
+End time = 3.200000 
 ASEd = 2.075090 
 Ti= -1.600720 
 ------------- New Frame : 26----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=3.200000 
+End time = 3.328000 
 ASEd = 2.340300 
 Ti= -1.477170 
 ------------- New Frame : 27----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=3.328000 
+End time = 3.456000 
 ASEd = 2.071770 
 Ti= -0.963590 
 ------------- New Frame : 28----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=3.456000 
+End time = 3.584000 
 ASEd = 1.891820 
 Ti= -1.726700 
 ------------- New Frame : 29----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=3.584000 
+End time = 3.712000 
 ASEd = 2.230300 
 Ti= -1.796570 
 ------------- New Frame : 30----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=3.712000 
+End time = 3.840000 
 ASEd = 1.230220 
 Ti= -1.182220 
 ------------- New Frame : 31----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=3.840000 
+End time = 3.968000 
 ASEd = 2.755120 
 Ti= -1.853060 
 ------------- New Frame : 32----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=3.968000 
+End time = 4.096000 
 ASEd = 2.488590 
 Ti= -2.053410 
 ------------- New Frame : 33----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=4.096000 
+End time = 4.224000 
 ASEd = 2.232100 
 Ti= -1.596090 
 ------------- New Frame : 34----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=4.224000 
+End time = 4.352000 
 ASEd = 1.533790 
 Ti= -1.229340 
 ------------- New Frame : 35----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=4.352000 
+End time = 4.480000 
 ASEd = 2.167250 
 Ti= -2.191430 
 ------------- New Frame : 36----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=4.480000 
+End time = 4.608000 
 ASEd = 2.382660 
 Ti= -1.366580 
 ------------- New Frame : 37----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=4.608000 
+End time = 4.736000 
 ASEd = 1.053220 
 Ti= -1.499730 
 ------------- New Frame : 38----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=4.736000 
+End time = 4.864000 
 ASEd = 5.500290 
 Ti= -1.418920 
 ------------- New Frame : 39----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=4.864000 
+End time = 4.992000 
 ASEd = 3.384130 
 Ti= -1.373990 
 ------------- New Frame : 40----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=4.992000 
+End time = 5.120000 
 ASEd = 1.664880 
 Ti= -1.820580 
 ------------- New Frame : 41----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=5.120000 
+End time = 5.248000 
 ASEd = 2.108910 
 Ti= -0.919550 
 ------------- New Frame : 42----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=5.248000 
+End time = 5.376000 
 ASEd = 1.626870 
 Ti= -1.703270 
 ------------- New Frame : 43----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=5.376000 
+End time = 5.504000 
 ASEd = 2.269460 
 Ti= -1.563180 
 ------------- New Frame : 44----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=5.504000 
+End time = 5.632000 
 ASEd = 2.882240 
 Ti= -2.287250 
 ------------- New Frame : 45----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=5.632000 
+End time = 5.760000 
 ASEd = 1.350380 
 Ti= -1.886720 
 ------------- New Frame : 46----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=5.760000 
+End time = 5.888000 
 ASEd = 2.718380 
 Ti= -1.023940 
 ------------- New Frame : 47----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=5.888000 
+End time = 6.016000 
 ASEd = 1.015930 
 Ti= -1.385230 
 ------------- New Frame : 48----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=6.016000 
+End time = 6.144000 
 ASEd = 1.933790 
 Ti= -1.751450 
 ------------- New Frame : 49----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=6.144000 
+End time = 6.272000 
 ASEd = 2.451800 
 Ti= -2.005990 
 ------------- New Frame : 50----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=6.272000 
+End time = 6.400000 
 ASEd = 2.072770 
 Ti= -1.223940 
 ------------- New Frame : 51----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=6.400000 
+End time = 6.528000 
 ASEd = 2.601740 
 Ti= -0.974630 
 ------------- New Frame : 52----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=6.528000 
+End time = 6.656000 
 ASEd = 1.369510 
 Ti= -1.144900 
 ------------- New Frame : 53----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=6.656000 
+End time = 6.784000 
 ASEd = 1.022890 
 Ti= -1.532360 
 ------------- New Frame : 54----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=6.784000 
+End time = 6.912000 
 ASEd = 2.034550 
 Ti= -1.394530 
 ------------- New Frame : 55----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=6.912000 
+End time = 7.040000 
 ASEd = 1.385250 
 Ti= -1.411570 
 ------------- New Frame : 56----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=7.040000 
+End time = 7.168000 
 ASEd = 3.270300 
 Ti= -2.483290 
 ------------- New Frame : 57----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=7.168000 
+End time = 7.296000 
 ASEd = 3.394430 
 Ti= -1.319910 
 ------------- New Frame : 58----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=7.296000 
+End time = 7.424000 
 ASEd = 1.969500 
 Ti= -1.430150 
 ------------- New Frame : 59----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=7.424000 
+End time = 7.552000 
 ASEd = 3.582630 
 Ti= -1.449230 
 ------------- New Frame : 60----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=7.552000 
+End time = 7.680000 
 ASEd = 3.609220 
 Ti= -1.392740 
 ------------- New Frame : 61----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=7.680000 
+End time = 7.808000 
 ASEd = 3.227080 
 Ti= -1.287780 
 ------------- New Frame : 62----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=7.808000 
+End time = 7.936000 
 ASEd = 3.224770 
 Ti= -1.365550 
 ------------- New Frame : 63----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=7.936000 
+End time = 8.064000 
 ASEd = 2.227480 
 Ti= -1.140710 
 ------------- New Frame : 64----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=8.064000 
+End time = 8.192000 
 ASEd = 2.086900 
 Ti= -2.094120 
 ------------- New Frame : 65----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=8.192000 
+End time = 8.320000 
 ASEd = 2.122800 
 Ti= -1.204190 
 ------------- New Frame : 66----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=8.320000 
+End time = 8.448000 
 ASEd = 2.240980 
 Ti= -1.361480 
 ------------- New Frame : 67----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=8.448000 
+End time = 8.576000 
 ASEd = 2.028270 
 Ti= -1.288010 
 ------------- New Frame : 68----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=8.576000 
+End time = 8.704000 
 ASEd = 2.595700 
 Ti= -2.004800 
 ------------- New Frame : 69----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=8.704000 
+End time = 8.832000 
 ASEd = 3.248020 
 Ti= -1.308640 
 ------------- New Frame : 70----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=8.832000 
+End time = 8.960000 
 ASEd = 2.044140 
 Ti= -1.274810 
 ------------- New Frame : 71----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=8.960000 
+End time = 9.088000 
 ASEd = 3.221010 
 Ti= -1.484770 
 ------------- New Frame : 72----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=9.088000 
+End time = 9.216000 
 ASEd = 2.001900 
 Ti= -1.425960 
 ------------- New Frame : 73----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=9.216000 
+End time = 9.344000 
 ASEd = 2.266560 
 Ti= -1.154940 
 ------------- New Frame : 74----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=9.344000 
+End time = 9.472000 
 ASEd = 2.752390 
 Ti= -1.613800 
 ------------- New Frame : 75----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=9.472000 
+End time = 9.600000 
 ASEd = 3.598610 
 Ti= -1.619370 
 ------------- New Frame : 76----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=9.600000 
+End time = 9.728000 
 ASEd = 2.564720 
 Ti= -1.307430 
 ------------- New Frame : 77----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=9.728000 
+End time = 9.856000 
 ASEd = 3.434240 
 Ti= -1.421810 
 ------------- New Frame : 78----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=9.856000 
+End time = 9.984000 
 ASEd = 3.751950 
 Ti= -1.501310 
 ------------- New Frame : 79----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=9.984000 
+End time = 10.112000 
 ASEd = 1.633050 
 Ti= -1.563100 
 ------------- New Frame : 80----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=10.112000 
+End time = 10.240000 
 ASEd = 3.445820 
 Ti= -1.373030 
 ------------- New Frame : 81----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=10.240000 
+End time = 10.368000 
 ASEd = 2.927570 
 Ti= -1.415830 
 ------------- New Frame : 82----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=10.368000 
+End time = 10.496000 
 ASEd = 4.324560 
 Ti= -1.629030 
 ------------- New Frame : 83----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=10.496000 
+End time = 10.624000 
 ASEd = 3.353230 
 Ti= -1.505080 
 ------------- New Frame : 84----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=10.624000 
+End time = 10.752000 
 ASEd = 2.462880 
 Ti= -1.453780 
 ------------- New Frame : 85----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=10.752000 
+End time = 10.880000 
 ASEd = 2.998040 
 Ti= -1.822640 
 ------------- New Frame : 86----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=10.880000 
+End time = 11.008000 
 ASEd = 2.090830 
 Ti= -1.437520 
 ------------- New Frame : 87----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=11.008000 
+End time = 11.136000 
 ASEd = 1.991090 
 Ti= -1.159930 
 ------------- New Frame : 88----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=11.136000 
+End time = 11.264000 
 ASEd = 1.844440 
 Ti= -1.172230 
 ------------- New Frame : 89----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=11.264000 
+End time = 11.392000 
 ASEd = 2.329210 
 Ti= -1.609970 
 ------------- New Frame : 90----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=11.392000 
+End time = 11.520000 
 ASEd = 2.195480 
 Ti= -1.371650 
 ------------- New Frame : 91----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=11.520000 
+End time = 11.648000 
 ASEd = 2.768190 
 Ti= -1.483990 
 ------------- New Frame : 92----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=11.648000 
+End time = 11.776000 
 ASEd = 2.257790 
 Ti= -1.221670 
 ------------- New Frame : 93----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=11.776000 
+End time = 11.904000 
 ASEd = 1.644120 
 Ti= -1.308530 
 ------------- New Frame : 94----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=11.904000 
+End time = 12.032000 
 ASEd = 2.271390 
 Ti= -2.370750 
 ------------- New Frame : 95----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=12.032000 
+End time = 12.160000 
 ASEd = 2.521610 
 Ti= -1.596240 
 ------------- New Frame : 96----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=12.160000 
+End time = 12.288000 
 ASEd = 3.593580 
 Ti= -1.491420 
 ------------- New Frame : 97----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=12.288000 
+End time = 12.416000 
 ASEd = 2.895700 
 Ti= -1.403070 
 ------------- New Frame : 98----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=12.416000 
+End time = 12.544000 
 ASEd = 3.639790 
 Ti= -1.763610 
 ------------- New Frame : 99----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=12.544000 
+End time = 12.672000 
 ASEd = 4.744420 
 Ti= -1.478280 
 ------------- New Frame : 100----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=12.672000 
+End time = 12.800000 
 ASEd = 1.484110 
 Ti= -1.271140 
 ------------- New Frame : 101----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=12.800000 
+End time = 12.928000 
 ASEd = 3.992020 
 Ti= -1.740780 
 ------------- New Frame : 102----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=12.928000 
+End time = 13.056000 
 ASEd = 2.221130 
 Ti= -1.417420 
 ------------- New Frame : 103----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=13.056000 
+End time = 13.184000 
 ASEd = 2.101850 
 Ti= -2.132210 
 ------------- New Frame : 104----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=13.184000 
+End time = 13.312000 
 ASEd = 3.118290 
 Ti= -1.334410 
 ------------- New Frame : 105----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=13.312000 
+End time = 13.440000 
 ASEd = 2.354820 
 Ti= -1.971680 
 ------------- New Frame : 106----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=13.440000 
+End time = 13.568000 
 ASEd = 1.999570 
 Ti= -1.052780 
 ------------- New Frame : 107----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=13.568000 
+End time = 13.696000 
 ASEd = 2.921970 
 Ti= -1.693040 
 ------------- New Frame : 108----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=13.696000 
+End time = 13.824000 
 ASEd = 3.357930 
 Ti= -1.990350 
 ------------- New Frame : 109----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=13.824000 
+End time = 13.952000 
 ASEd = 3.437580 
 Ti= -1.818910 
 ------------- New Frame : 110----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=13.952000 
+End time = 14.080000 
 ASEd = 3.459240 
 Ti= -1.516740 
 ------------- New Frame : 111----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=14.080000 
+End time = 14.208000 
 ASEd = 2.471810 
 Ti= -1.401310 
 ------------- New Frame : 112----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=14.208000 
+End time = 14.336000 
 ASEd = 2.712530 
 Ti= -2.363350 
 ------------- New Frame : 113----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=14.336000 
+End time = 14.464000 
 ASEd = 1.565460 
 Ti= -1.427440 
 ------------- New Frame : 114----------------
-start Time=0.000000 
-End time = 0.128000 
+start Time=14.464000 
+End time = 14.592000 
 ASEd = 1.770750 
 Ti= -1.278650 
 Max Values  :  

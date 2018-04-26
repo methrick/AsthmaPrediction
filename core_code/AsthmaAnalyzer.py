@@ -66,7 +66,9 @@ class AsthmaAnalyzer(object):
         for i in range(self.number_of_signals_in_file - 1):
             current_signal_obj = self.resampled_input_signal[i * self.signal_length:(i + 1) * self.signal_length]
             file_obj.write('------------- New Frame : %d----------------\n' % (i + 1))
-            end_time, start_time = self.calculate_current_frame_time(current_time)
+
+            end_time, start_time = self.calculate_current_frame_time(current_signal_obj, current_time)
+            current_time = end_time
             # plot_time_freq(current_signal_obj, self.Fs_audio,
             # 'Segment : %d ; start =  %.3f ; End = %.3f' % (i, start_time, end_time), self.screen_shot_path)
             current_feature_extractor_obj = FeatureExtractor(current_signal_obj, self.signal_length, start_time,
@@ -80,9 +82,9 @@ class AsthmaAnalyzer(object):
         file_obj.write('Max Values  :  \n ASE = %f  \n Ti = %f \n' % (max_ase, max_Ti))
         file_obj.close()
 
-    def calculate_current_frame_time(self, current_time):
+    def calculate_current_frame_time(self, current_signal_obj, current_time):
         start_time = current_time
-        current_time += self.signal_length / self.fs_signal
+        current_time += current_signal_obj.size / self.fs_signal
         end_time = current_time
         return end_time, start_time
 
