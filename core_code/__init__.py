@@ -1,7 +1,7 @@
 from core_code.AsthmaAnalyzer import AsthmaAnalyzer
 
-audio_file_path = '../samples/wheeze_with_crackles.wav'
-audio_file_name = 'wheeze_with_crackles'
+audio_file_path = '../samples/NormalBreathSound.wav'
+audio_file_name = 'Normal Breath Sound'
 
 asthma_analyzer = AsthmaAnalyzer('%s' % audio_file_path,
                                  '%s' % audio_file_name)

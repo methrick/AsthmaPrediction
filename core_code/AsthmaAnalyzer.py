@@ -8,26 +8,27 @@ from scipy.io import wavfile
 from scipy import signal
 import sounddevice as sd
 import os
+import soundfile as sf
+import resampy
 
 from core_code.FeatureExtractor import FeatureExtractor
+from core_code.helper_functions import plot_time_freq
 
 AudioSegment.converter = which("ffmpeg")
 
 
 class AsthmaAnalyzer(object):
     audio_file_path: string = ''
-    fs_signal: int = 8 * 10 ** 3
+    fs_resampled_signal: int = 8 * 10 ** 3
 
     audio_duration: float = 0
-    Fs_audio: int = 0
+    fs_input_signal: int = 0
     signal_length: int = 1024
     number_of_signals_in_file: np.int64 = 0
     input_signal: np.ndarray
     resampled_input_signal: np.ndarray
     extracted_features = []
-
-    # Saving paths variables
-    file_name: string = ''
+    file_name: string = '' # Saving paths variables
     general_path_to_save = '../experiments'
     result_path = ''
     screen_shot_path = ''
@@ -38,44 +39,45 @@ class AsthmaAnalyzer(object):
         self.__extract_data()
 
     def __extract_data(self):
-        fs, data = wavfile.read(self.audio_file_path)
+        # fs, data = wavfile.read(self.audio_file_path)
+        data, fs = sf.read(self.audio_file_path)
         # data = np.sin(data)
         if data.ndim > 1:
             data = data[:, 0]  # Taking the first channel only
-        data = data.astype(np.float64)
-        data = (1 - (-1)) * (data - data.min(0)) / data.ptp(0) - 1  # normalize the data between -1 and
-        # data = np.random.rand(301) - 0.5
+        # data = data.astype(np.float64)
+        # data = (1 - (-1)) * (data - data.min(0)) / data.ptp(0) - 1  # normalize the data between -1 and
+        # # data = np.random.rand(301) - 0.5
         self.audio_duration = data[:].size / fs
-        self.Fs_audio = fs
+        self.fs_input_signal = fs
         self.input_signal = data[:]
         self.create_required_directories()
-        # plot_time_freq(self.input_signal, self.Fs_audio, 'Pure Signal', self.screen_shot_path)
+        plot_time_freq(self.input_signal, self.fs_input_signal, 'Pure Signal', self.screen_shot_path)
 
     def get_signal_features(self):
         # 1. Pre process the signal
         self.__pre_process_signal()
         # 2. Loop through all signals
-        # sd.play(self.input_signal, self.Fs_audio)
+        # sd.play(self.input_signal, self.fs_input_signal)
 
-        #  plot_time_freq(self.resampled_input_signal, self.fs_signal, ' Resembled Signal', self.screen_shot_path)
+        # plot_time_freq(self.resampled_input_signal, self.fs_resampled_signal, ' Resembled Signal', self.screen_shot_path)
         file_obj = open(self.result_path + "/data.txt", "w+")
         file_obj.write("Signal Name : " + self.file_name + "\n")
         current_time: float = 0
         max_ase = 0
         max_Ti = -10000
-        for i in range(self.number_of_signals_in_file - 1):
-            current_signal_obj = self.resampled_input_signal[i * self.signal_length:(i + 1) * self.signal_length]
+        for i in range(self.number_of_signals_in_file):
+            current_signal_obj = self.input_signal[i * self.signal_length:(i + 1) * self.signal_length]
             file_obj.write('------------- New Frame : %d----------------\n' % (i + 1))
 
             end_time, start_time = self.calculate_current_frame_time(current_signal_obj, current_time)
             current_time = end_time
-            # plot_time_freq(current_signal_obj, self.Fs_audio,
+            # plot_time_freq(current_signal_obj, self.fs_input_signal,
             # 'Segment : %d ; start =  %.3f ; End = %.3f' % (i, start_time, end_time), self.screen_shot_path)
             current_feature_extractor_obj = FeatureExtractor(current_signal_obj, self.signal_length, start_time,
                                                              end_time, i)
             ASE_val, Ti_val = current_feature_extractor_obj.calculate_signal_features()
             file_obj.write(
-                'start Time=%f \nEnd time = %f \nASEd = %f \nTi= %f \n' % (start_time, end_time, ASE_val, Ti_val))
+                'start Time=%f \nEnd time = %f \nASE = %f \nTi= %f \n' % (start_time, end_time, ASE_val, Ti_val))
             max_ase = max(max_ase, ASE_val)
             max_Ti = max(max_Ti, Ti_val)
 
@@ -84,16 +86,17 @@ class AsthmaAnalyzer(object):
 
     def calculate_current_frame_time(self, current_signal_obj, current_time):
         start_time = current_time
-        current_time += current_signal_obj.size / self.fs_signal
+        current_time += current_signal_obj.size / self.fs_resampled_signal
         end_time = current_time
         return end_time, start_time
 
     def __pre_process_signal(self):
-        resampled_length = np.floor(self.fs_signal * self.audio_duration)
+        resampled_length = np.floor(self.fs_resampled_signal * self.audio_duration)
         resampled_length = resampled_length.astype(np.int64)
-        self.resampled_input_signal = signal.resample(self.input_signal, resampled_length)
+        self.resampled_input_signal = resampy.resample(self.input_signal, self.fs_input_signal,
+                                                       self.fs_resampled_signal)
         self.resampled_input_signal_length = resampled_length
-        self.number_of_signals_in_file = np.floor(self.resampled_input_signal_length / self.signal_length).astype(
+        self.number_of_signals_in_file = np.floor(self.input_signal.size / self.signal_length).astype(
             np.int64)
 
     def create_required_directories(self):
@@ -106,5 +109,3 @@ class AsthmaAnalyzer(object):
         self.result_path = self.general_path_to_save + '/result/'
         if not os.path.exists(self.result_path):
             os.makedirs(self.result_path)
-
-

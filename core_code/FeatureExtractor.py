@@ -50,14 +50,14 @@ class FeatureExtractor:
     # noinspection PyTypeChecker
     def setup_cache_data(self):
         self.signal_cache_data['x_m_arr'] = np.zeros(shape=(self.number_of_frames, self.N))
-        number_of_selected_bins = self.K_max - self.K_min
+        number_of_selected_bins = self.K_max - self.K_min + 1
         self.signal_cache_data['x_m_k_arr'] = np.zeros(shape=(self.number_of_frames, self.N), dtype=np.complex_)
         self.signal_cache_data['r_m_k_arr'] = np.zeros(shape=(self.number_of_frames, number_of_selected_bins))
         self.signal_cache_data['power_arr'] = np.zeros(shape=(self.number_of_frames, number_of_selected_bins))
         self.signal_cache_data['phs_x_m_k_arr'] = np.zeros(shape=(self.number_of_frames, number_of_selected_bins))
-        self.signal_cache_data['energy_arr'] = np.zeros(shape=(self.number_of_frames, number_of_selected_bins))
+        self.signal_cache_data['energy_arr'] = np.zeros(shape=(self.number_of_frames, 1))
         self.signal_cache_data['unpredict_spectrum_arr'] = np.zeros(
-            shape=(self.number_of_frames, number_of_selected_bins))
+            shape=(self.number_of_frames, 1))
         self.signal_cache_data['ASE_arr'] = np.zeros(shape=(self.number_of_frames, 1))
         self.signal_cache_data['Ti_arr'] = np.zeros(shape=(self.number_of_frames, 1))
 
@@ -102,7 +102,7 @@ class FeatureExtractor:
     def __calculate_fluctuation_in_ASE(self, ASE_m_k):
         fluct_ASE = 0
         k = 1
-        for _ in range(self.K_min, self.K_max - 1, 1):
+        for _ in range(self.K_min, self.K_max, 1):
             fluct_ASE += abs(ASE_m_k[k] - ASE_m_k[k - 1])
             k += 1
         fluct_ASE = round(fluct_ASE, 5)
@@ -117,13 +117,13 @@ class FeatureExtractor:
 
     def __get_previous_ASE(self, current_iteration):
         l = current_iteration - self.L_ase + 1
-        if l <= 0:
+        if l < 0:
             l = 0
-        ASE_m_k = np.zeros(shape=(self.K_max - self.K_min))
+        ASE_m_k = np.zeros(shape=(self.K_max - self.K_min + 1))
         for j in range(l, current_iteration + 1, 1):
             if j == current_iteration + 1:
                 break
-            ASE_m_k += self.signal_cache_data['power_arr'][current_iteration, :]
+            ASE_m_k += self.signal_cache_data['power_arr'][j, :]
         return ASE_m_k
 
     def __calculate_tonality_index(self):
@@ -133,9 +133,8 @@ class FeatureExtractor:
         phs_x_m_k_prev = self.__calculate_prev_phase(current_iteration)
         self.__calculate_rate_of_change_of_spectrum(r_m_k_prev, phs_x_m_k_prev)
         self.__calculate_energy_of_signal()
-
         c_m_k_w_mean, e_mean = self.__calculate_prev_changes_energy()
-        ratio = self.get_ration_between_spectrum_and_energy(c_m_k_w_mean, e_mean)
+        ratio = c_m_k_w_mean / e_mean
         Ti_m = np.log10(ratio)
         Ti_m = round(Ti_m, 5)  # Round it to most 5 decimates, e.g. 0.000001 => 0.0
         self.signal_cache_data['Ti_arr'][current_iteration, 0] = Ti_m
@@ -152,9 +151,12 @@ class FeatureExtractor:
         e_mean = 0
         c_m_k_w_mean = 0
         l = current_iteration - self.L_Ti + 1
-        for j in range(l, current_iteration, 1):
-            e_mean += self.signal_cache_data['energy_arr'][current_iteration, :]
-            c_m_k_w_mean += self.signal_cache_data['unpredict_spectrum_arr'][current_iteration, :]
+        if (l < 0):
+            l = 0
+        for j in range(l, current_iteration + 1, 1):
+            e_mean += self.signal_cache_data['energy_arr'][j, 0]
+            c_m_k_w_mean += self.signal_cache_data['unpredict_spectrum_arr'][j, 0]
+
         e_mean /= self.L_Ti
         c_m_k_w_mean /= self.L_Ti
         return c_m_k_w_mean, e_mean
@@ -162,38 +164,40 @@ class FeatureExtractor:
     def __calculate_phase_of_signal(self):
         current_iteration = self.current_iteration
         x_m_k = self.signal_cache_data['x_m_k_arr'][current_iteration, :]
-        phs_x_m_k = np.angle(x_m_k[self.K_min:self.K_max])
+        phs_x_m_k = np.angle(x_m_k[self.K_min - 1:self.K_max])
         self.signal_cache_data['phs_x_m_k_arr'][current_iteration, :] = phs_x_m_k
 
     def __calculate_energy_of_signal(self):
         current_iteration = self.current_iteration
         p_m_k = self.signal_cache_data['power_arr']
         e_m = np.sum(p_m_k)  # Energy of the signal
-        self.signal_cache_data['energy_arr'][current_iteration, :] = e_m
+        self.signal_cache_data['energy_arr'][current_iteration, 0] = e_m
 
     def __calculate_rate_of_change_of_spectrum(self, r_m_k_prev, phs_x_m_k_prev):
         current_iteration = self.current_iteration
-        phs_x_m_k = self.signal_cache_data['phs_x_m_k_arr'][current_iteration - 1, :]
-        r_m_k = self.signal_cache_data['r_m_k_arr'][current_iteration - 1, :]
+        phs_x_m_k = self.signal_cache_data['phs_x_m_k_arr'][current_iteration, :]
+        r_m_k = self.signal_cache_data['r_m_k_arr'][current_iteration, :]
         A_m = np.multiply(r_m_k, np.cos(phs_x_m_k)) - np.multiply(r_m_k_prev, np.cos(phs_x_m_k_prev))
         B_m = np.multiply(r_m_k, np.sin(phs_x_m_k)) - np.multiply(r_m_k_prev, np.sin(phs_x_m_k_prev))
         c_m_k = np.sqrt(A_m ** 2 + B_m ** 2) / (r_m_k + abs(r_m_k_prev))  # Spectrum Un predictability
         p_m_k = self.signal_cache_data['power_arr'][current_iteration, :]
         c_m_k_w = np.sum(np.multiply(c_m_k, p_m_k))  #
-        self.signal_cache_data['unpredict_spectrum_arr'][current_iteration, :] = c_m_k_w
+        self.signal_cache_data['unpredict_spectrum_arr'][current_iteration, 0] = c_m_k_w
 
     def __calculate_prev_phase(self, current_iteration):
         phs_x_m_k_prev = 0
-        if current_iteration > 3:
+        if current_iteration > 0:
             phs_x_m_k_prev = 2 * self.signal_cache_data['phs_x_m_k_arr'][current_iteration - 1, :]
-            phs_x_m_k_prev -= self.signal_cache_data['phs_x_m_k_arr'][current_iteration - 2, :]
+            if current_iteration != 1:
+                phs_x_m_k_prev -= self.signal_cache_data['phs_x_m_k_arr'][current_iteration - 2, :]
         return phs_x_m_k_prev
 
     def __calculate_prev_magnitude(self, current_iteration):
         r_m_k_prev = 0
-        if current_iteration > 3:
+        if current_iteration > 0:
             r_m_k_prev = 2 * self.signal_cache_data['r_m_k_arr'][current_iteration - 1, :]
-            r_m_k_prev -= self.signal_cache_data['r_m_k_arr'][current_iteration - 2, :]
+            if current_iteration != 1:
+                r_m_k_prev -= self.signal_cache_data['r_m_k_arr'][current_iteration - 2, :]
         return r_m_k_prev
 
     def __preproces_frame(self):  # normalize the signal
@@ -229,5 +233,8 @@ class FeatureExtractor:
     def __calculate_magnitude(self):
         current_iteration = self.current_iteration
         x_m_k = self.signal_cache_data['x_m_k_arr'][current_iteration, :]
-        r_m_k = np.abs(x_m_k[self.K_min:self.K_max])
+        r_m_k = np.abs(
+            x_m_k[
+            self.K_min - 1:self.K_max])  # -1 for each cut edge because indices start from zero not one,
+        # K_max without -1 to include to K_max
         self.signal_cache_data['r_m_k_arr'][current_iteration, :] = r_m_k

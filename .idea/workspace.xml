@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f42d3bb-734d-4b7c-b566-9b5ef6e37ef6" name="Default" comment="" />
+    <list default="true" id="0f42d3bb-734d-4b7c-b566-9b5ef6e37ef6" name="Default" comment="Fixing repeated issue with the time">
+      <change afterPath="$PROJECT_DIR$/.idea/vagrant.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core_code/AsthmaAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_code/AsthmaAnalyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core_code/FeatureExtractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_code/FeatureExtractor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core_code/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_code/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core_code/helper_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/core_code/helper_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/Normal Breath Sound/result/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/Normal Breath Sound/result/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiments/wheeze_with_crackles/result/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/experiments/wheeze_with_crackles/result/data.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,8 +20,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Asthma$main.coverage" NAME="main Coverage Results" MODIFIED="1524706021250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
-    <SUITE FILE_PATH="coverage/Asthma$AsthmaAnalyzer.coverage" NAME="AsthmaAnalyzer Coverage Results" MODIFIED="1524705817307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Asthma$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1524706503540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core_code" />
+    <SUITE FILE_PATH="coverage/Asthma$AsthmaAnalyzer.coverage" NAME="AsthmaAnalyzer Coverage Results" MODIFIED="1524768429153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Asthma$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1524946479390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core_code" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -33,11 +42,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core_code/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AsthmaAnalyzer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core_code/AsthmaAnalyzer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FeatureExtractor.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core_code/FeatureExtractor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="32" column="2" selection-start-line="32" selection-start-column="2" selection-end-line="43" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiments/Normal Breath Sound/result/data.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8262">
+              <caret line="486" column="44" selection-start-line="486" selection-start-column="44" selection-end-line="486" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NormalBreathSound.wav.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiments/Normal Breath Sound/result/NormalBreathSound.wav.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -54,19 +105,31 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>;</find>
-      <find />
+      <find>class nd</find>
       <find>sine</find>
-      <find />
+      <find>[:, i]</find>
       <find>floor</find>
       <find>play</find>
       <find>ASE_arr</find>
       <find>Ti_arr</find>
-      <find>plot_time</find>
       <find>pydevd_cython</find>
+      <find>5.500290</find>
+      <find>3.45</find>
+      <find>self.K_max -</find>
+      <find>self.K_max</find>
+      <find>unpredict_spectrum_arr</find>
+      <find>382</find>
+      <find>2.7</find>
+      <find>e_mean</find>
+      <find>plot_time</find>
+      <find>&gt; 3</find>
     </findStrings>
     <replaceStrings>
       <replace />
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -83,9 +146,14 @@
         <option value="$PROJECT_DIR$/code/main.py" />
         <option value="$PROJECT_DIR$/code/__init__.py" />
         <option value="$PROJECT_DIR$/code/AsthmaAnalyzer.py" />
-        <option value="$PROJECT_DIR$/experiments/wheeze_with_crackles/result/data.txt" />
         <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/experiments/wheeze_with_crackles/result/data.txt" />
+        <option value="$PROJECT_DIR$/experiments/wheeze_with_crackles/result/wheeze_with_crackles.wav.txt" />
         <option value="$PROJECT_DIR$/core_code/__init__.py" />
+        <option value="$PROJECT_DIR$/experiments/Normal Breath Sound/result/NormalBreathSound.wav.txt" />
+        <option value="$PROJECT_DIR$/core_code/helper_functions.py" />
+        <option value="$PROJECT_DIR$/core_code/AsthmaAnalyzer.py" />
+        <option value="$PROJECT_DIR$/core_code/FeatureExtractor.py" />
       </list>
     </option>
   </component>
@@ -102,12 +170,12 @@
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Changed Files" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -129,19 +197,61 @@
               <item name="Asthma" type="b2602c69:ProjectViewProjectNode" />
               <item name="Asthma" type="462c0819:PsiDirectoryNode" />
               <item name="experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="wheeze_with_crackles" type="462c0819:PsiDirectoryNode" />
+              <item name="Normal Breath Sound" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Asthma" type="b2602c69:ProjectViewProjectNode" />
               <item name="Asthma" type="462c0819:PsiDirectoryNode" />
               <item name="experiments" type="462c0819:PsiDirectoryNode" />
-              <item name="wheeze_with_crackles" type="462c0819:PsiDirectoryNode" />
+              <item name="Normal Breath Sound" type="462c0819:PsiDirectoryNode" />
               <item name="result" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Changed Files">
+          <expand>
             <path>
-              <item name="Asthma" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Asthma" type="462c0819:PsiDirectoryNode" />
-              <item name="samples" type="462c0819:PsiDirectoryNode" />
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Asthma" type="cbb8eebc:String" user="Asthma" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Asthma" type="cbb8eebc:String" user="Asthma" />
+              <item name="core_code" type="cbb8eebc:String" user="core_code" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Asthma" type="cbb8eebc:String" user="Asthma" />
+              <item name="experiments" type="cbb8eebc:String" user="experiments" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Asthma" type="cbb8eebc:String" user="Asthma" />
+              <item name="experiments" type="cbb8eebc:String" user="experiments" />
+              <item name="Normal Breath Sound" type="cbb8eebc:String" user="Normal Breath Sound" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Asthma" type="cbb8eebc:String" user="Asthma" />
+              <item name="experiments" type="cbb8eebc:String" user="experiments" />
+              <item name="Normal Breath Sound" type="cbb8eebc:String" user="Normal Breath Sound" />
+              <item name="result" type="cbb8eebc:String" user="result" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Asthma" type="cbb8eebc:String" user="Asthma" />
+              <item name="experiments" type="cbb8eebc:String" user="experiments" />
+              <item name="wheeze_with_crackles" type="cbb8eebc:String" user="wheeze_with_crackles" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Asthma" type="cbb8eebc:String" user="Asthma" />
+              <item name="experiments" type="cbb8eebc:String" user="experiments" />
+              <item name="wheeze_with_crackles" type="cbb8eebc:String" user="wheeze_with_crackles" />
+              <item name="result" type="cbb8eebc:String" user="result" />
             </path>
           </expand>
           <select />
@@ -152,10 +262,15 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="ndarray&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="PyScientificConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiments/Normal Breath Sound/result" />
+      <recent name="$PROJECT_DIR$/experiments/wheeze_with_crackles/result" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiments/wheeze_with_crackles/result" />
       <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$/code" />
       <recent name="$PROJECT_DIR$/../code" />
@@ -175,24 +290,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="AsthmaAnalyzer" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Asthma" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AsthmaAnalyzer.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Asthma" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -215,7 +312,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.__init__" />
-        <item itemvalue="Python.AsthmaAnalyzer" />
       </list>
     </recent_temporary>
   </component>
@@ -230,6 +326,14 @@
       <option name="presentableId" value="Default" />
       <updated>1520702622135</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixing repeated issue with the time">
+      <created>1524769091171</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1524769091171</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -243,22 +347,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32923076" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32923076" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32923076" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3220513" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3220513" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32820514" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49618322" visible="true" weight="0.25213677" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.48929664" visible="true" weight="0.2735043" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.32967034" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32967034" />
-      <window_info id="Structure" order="1" sideWeight="0.5008944" side_tool="true" weight="0.25316456" />
-      <window_info id="Favorites" order="2" sideWeight="0.5038168" side_tool="true" weight="0.25213677" />
+      <window_info id="Structure" order="0" sideWeight="0.50596255" side_tool="true" weight="0.26129428" />
+      <window_info id="Favorites" order="1" sideWeight="0.5107034" side_tool="true" visible="true" weight="0.2735043" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3979487" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -268,6 +370,7 @@
       <window_info anchor="right" x="0" y="0" width="370" height="850" id="Documentation" order="3" side_tool="true" weight="0.32967034" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32923076" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,8 +379,19 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixing repeated issue with the time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing repeated issue with the time" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/core_code/FeatureExtractor.py</url>
+          <line>239</line>
+          <option name="timeStamp" value="230" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -285,41 +399,39 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="183" />
+      <option name="time" value="232" />
     </breakpoint-manager>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>current_iteration == self.number_of_frames -1</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i == self.number_of_frames -1</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i == 462</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>i == 463</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>e_mean == 0</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core_code/FeatureExtractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core_code/AsthmaAnalyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core_code/AsthmaAnalyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="28" lean-forward="true" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core_code/FeatureExtractor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1377">
@@ -337,13 +449,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sample.py" />
     <entry file="file://$PROJECT_DIR$/core_code/AsthmaAnalyzer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
@@ -351,13 +457,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sample.py" />
     <entry file="file://$PROJECT_DIR$/core_code/AsthmaAnalyzer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -365,13 +465,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sample.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/numpy/random/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -449,13 +543,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sample.py" />
     <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/scipy/io/wavfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -502,9 +590,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#85#128#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -557,13 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="707" column="4" selection-start-line="707" selection-start-column="4" selection-end-line="707" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/python_stubs/-1568125482/numpy/core/umath.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -585,16 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core_code/helper_functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="66" column="19" lean-forward="true" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/python_stubs/-1568125482/numpy/core/multiarray.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1321">
@@ -602,13 +670,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core_code/FeatureExtractor.py">
+    <entry file="file://$PROJECT_DIR$/code/experiments/wheeze_with_crackles/result/data.txt" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1423">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
@@ -619,38 +685,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/main.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/experiments/wheeze_with_crackles/result/data.txt">
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.1/python_stubs/-1568125482/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5680" />
+        <state relative-caret-position="316">
+          <caret line="775" column="8" selection-start-line="775" selection-start-column="8" selection-end-line="775" selection-end-column="8" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/soundfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="-2999">
+          <caret line="169" column="4" selection-start-line="169" selection-start-column="4" selection-end-line="169" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/wheeze_with_crackles/result/wheeze_with_crackles.wav.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/wheeze_with_crackles/result/data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39457">
+          <caret line="2321" selection-start-line="2321" selection-end-line="2324" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/lib/python3.6/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3242" column="4" selection-start-line="3242" selection-start-column="4" selection-end-line="3242" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core_code/AsthmaAnalyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        <state relative-caret-position="663">
+          <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="40" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiments/wheeze_with_crackles/result/data.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/core_code/helper_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="12" lean-forward="true" selection-start-line="3" selection-end-line="4" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core_code/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/Normal Breath Sound/result/NormalBreathSound.wav.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiments/Normal Breath Sound/result/data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8262">
+          <caret line="486" column="44" selection-start-line="486" selection-start-column="44" selection-end-line="486" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core_code/FeatureExtractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="32" column="2" selection-start-line="32" selection-start-column="2" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

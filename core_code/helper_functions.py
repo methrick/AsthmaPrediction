@@ -63,8 +63,8 @@ def plot_time(y, fs, extitle=None, path_to_save=''):
     plt.plot(t, y)
     xlabel('Time')
     ylabel('Amplitude')
-    # plt.show()
-    plt.savefig('%s/Time Domain of the signal  %s' % (path_to_save, str(extitle)) + '.png', bbox_inches='tight')
+    plt.show()
+    # plt.savefig('%s/Time Domain of the signal  %s' % (path_to_save, str(extitle)) + '.png', bbox_inches='tight')
 
 
 def plot_time_freq(x_t, fs, title='', path_to_save=None):
