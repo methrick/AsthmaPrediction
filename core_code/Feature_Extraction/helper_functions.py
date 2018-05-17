@@ -1,8 +1,12 @@
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
+matplotlib.use('Agg')
+matplotlib.pyplot.ioff()
 from numpy import sin, linspace, pi
 from pylab import plot, show, title, xlabel, ylabel, subplot
 from scipy import fft, arange
+
 
 
 def plot_frequency(data):

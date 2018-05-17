@@ -31,7 +31,10 @@ def set_up_db():
     dotenv_path = root_dir + '/config/.env'
     # Load file from the path.
     load_dotenv(dotenv_path)
-    client = MongoClient(os.getenv('DB_HOST'), int(os.getenv('DB_PORT')))
+    client = MongoClient("mongodb://" + os.getenv('DB_USERNAME') + ":" + os.getenv('DB_PASSWORD') + "@" + os.getenv(
+        'DB_HOST') + ":" + os.getenv('DB_PORT') + "/")
+    db = client[os.getenv('DB_DATABASE')]
+    # db.authenticate(os.getenv('DB_USERNAME'), os.getenv('DB_PASSWORD'))
 
     # cred = credentials.Certificate(root_dir + '/config/serviceAccountKey.json')
     # firebase_admin.initialize_app(cred)
@@ -46,9 +49,9 @@ def get_breath_features_cb(audio_file_name, audio_file_path):
 
 def save_each_sample(cb):
     is_training = False
-   # data = "***REMOVED***\"label\":\"normal\",\"data_type\":\"training\",\"breath_files\":[***REMOVED***\"file_name\":\"normal-training-audio[0]-1526170690677.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[0]-1526170690677.wav\"***REMOVED***,***REMOVED***\"file_name\":\"normal-training-audio[1]-1526170690703.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[1]-1526170690703.wav\"***REMOVED***,***REMOVED***\"file_name\":\"normal-training-audio[2]-1526170690709.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[2]-1526170690709.wav\"***REMOVED***]***REMOVED***"
+    # data = "***REMOVED***\"label\":\"normal\",\"data_type\":\"training\",\"breath_files\":[***REMOVED***\"file_name\":\"normal-training-audio[0]-1526170690677.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[0]-1526170690677.wav\"***REMOVED***,***REMOVED***\"file_name\":\"normal-training-audio[1]-1526170690703.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[1]-1526170690703.wav\"***REMOVED***,***REMOVED***\"file_name\":\"normal-training-audio[2]-1526170690709.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[2]-1526170690709.wav\"***REMOVED***]***REMOVED***"
     if len(sys.argv) < 2:
-        raise  Exception('No argument sent')
+        raise Exception('No argument sent')
     data = sys.argv[1]
     data = json.loads(data, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
     if not hasattr(data, 'breath_files'):
@@ -96,5 +99,5 @@ set_up_db()
 save_each_sample(get_breath_features_cb)
 End = time.time()
 elapsed = End - start
-print("End Time = "+str(End) + "\n")
+print("End Time = " + str(End) + "\n")
 print("Difference = " + str(elapsed))
