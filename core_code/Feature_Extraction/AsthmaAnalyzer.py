@@ -7,11 +7,12 @@ from pydub.utils import which
 import os
 import soundfile as sf
 import resampy
+
 current_file_path = os.path.abspath(__file__)
 root_dir = os.path.abspath(current_file_path + '/../../../')
 
 from core_code.Feature_Extraction.FeatureExtractor import FeatureExtractor
-from core_code.Feature_Extraction.helper_functions import plot_time_freq
+from core_code.Feature_Extraction.helper_functions import plot_time_freq, remove_dc
 
 AudioSegment.converter = which("ffmpeg")
 
@@ -28,7 +29,7 @@ class AsthmaAnalyzer(object):
     resampled_input_signal: np.ndarray
     extracted_features = []
     file_name: string = ''  # Saving paths variables
-    general_path_to_save = os.path.abspath(root_dir+'/experiments')
+    general_path_to_save = os.path.abspath(root_dir + '/experiments')
     result_path = ''
     screen_shot_path = ''
     signal_cache_data = []
@@ -55,6 +56,8 @@ class AsthmaAnalyzer(object):
         self.audio_duration = data[:].size / fs
         self.fs_input_signal = fs
         self.input_signal = data[:]
+        # self.input_signal = remove_dc(self.input_signal, 100, 1400, self.fs_input_signal)
+
         self.create_required_directories()
         plot_time_freq(self.input_signal, self.fs_input_signal, 'Pure Signal', self.screen_shot_path)
 
@@ -76,8 +79,9 @@ class AsthmaAnalyzer(object):
 
             end_time, start_time = self.calculate_current_frame_time(current_signal_obj, current_time)
             current_time = end_time
-            # plot_time_freq(current_signal_obj, self.fs_input_signal,
-            # 'Segment : %d ; start =  %.3f ; End = %.3f' % (i, start_time, end_time), self.screen_shot_path)
+
+            # plot_time_freq(current_signal_obj, self.fs_input_signal, 'Frame ', self.screen_shot_path)
+
             current_feature_extractor_obj = FeatureExtractor(current_signal_obj, self.signal_length,
                                                              self.fs_input_signal, start_time,
                                                              end_time, i, self.audio_id)
@@ -92,6 +96,10 @@ class AsthmaAnalyzer(object):
             Ti_val = Ti_cur[-1, 0]
             self.final_ASE = ASE_val
             self.final_Ti = Ti_val
+            if ASE_val > 3:
+                plot_time_freq(current_signal_obj, self.fs_input_signal,
+                               'Segment : %d ; start =  %.3f ; End = %.3f' % (i, start_time, end_time),
+                               self.screen_shot_path)
             file_obj.write(
                 'start Time=%f \nEnd time = %f \nASE = %f \nTi= %f \n' % (start_time, end_time, ASE_val, Ti_val))
             max_ase = max(max_ase, ASE_val)

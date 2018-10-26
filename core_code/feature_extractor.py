@@ -49,10 +49,10 @@ def get_breath_features_cb(audio_file_name, audio_file_path):
 
 def save_each_sample(cb):
     is_training = False
-    # data = "***REMOVED***\"label\":\"normal\",\"data_type\":\"training\",\"breath_files\":[***REMOVED***\"file_name\":\"normal-training-audio[0]-1526170690677.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[0]-1526170690677.wav\"***REMOVED***,***REMOVED***\"file_name\":\"normal-training-audio[1]-1526170690703.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[1]-1526170690703.wav\"***REMOVED***,***REMOVED***\"file_name\":\"normal-training-audio[2]-1526170690709.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[2]-1526170690709.wav\"***REMOVED***]***REMOVED***"
-    if len(sys.argv) < 2:
-        raise Exception('No argument sent')
-    data = sys.argv[1]
+    data = "***REMOVED***\"label\":\"normal\",\"data_type\":\"training\",\"breath_files\":[***REMOVED***\"file_name\":\"normal-training-audio[0]-1526170690677.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[0]-1526170690677.wav\"***REMOVED***,***REMOVED***\"file_name\":\"normal-training-audio[1]-1526170690703.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[1]-1526170690703.wav\"***REMOVED***,***REMOVED***\"file_name\":\"normal-training-audio[2]-1526170690709.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[2]-1526170690709.wav\"***REMOVED***]***REMOVED***"
+    #if len(sys.argv) < 2:
+        #raise Exception('No argument sent')
+    #data = sys.argv[1]
     data = json.loads(data, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
     if not hasattr(data, 'breath_files'):
         raise Exception('No Breath sound files path sent, it should be as array with name breath_files')
@@ -64,6 +64,9 @@ def save_each_sample(cb):
     for single_record in all_records:
         if not hasattr(single_record, 'file_name') or not hasattr(single_record, 'file_path'):
             raise Exception('Some files you send doesn"t has file_name or file_path attribute')
+        # audio_file_name = "Wheeze_mircphone"
+        # audio_file_path = "/Users/JasemAl-sadi/PycharmProjects/Asthma/samples/8k_fs/wheeze/wheeze_from_microphone.WAV"
+
         audio_file_name = single_record.file_name
         audio_file_path = single_record.file_path
         # db = firestore.client()

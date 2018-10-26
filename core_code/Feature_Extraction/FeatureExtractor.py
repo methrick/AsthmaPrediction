@@ -2,6 +2,8 @@ import numpy as np
 from scipy import signal
 from scipy import fftpack
 
+from core_code.Feature_Extraction.helper_functions import plot_time_freq
+
 
 class FeatureExtractor:
     audio_id = 0
@@ -222,6 +224,8 @@ class FeatureExtractor:
     def __calculate_spectrum(self):
         current_iteration = self.current_iteration
         x_m = self.__windowing_signal(current_iteration)
+        # plot_time_freq(x_m, self.fs_signal,
+        #                'Segment : %d' % self.current_iteration, )
         x_m_k = fftpack.fft(x_m, x_m.size)
         self.signal_cache_data['x_m_k_arr'][current_iteration, :] = x_m_k
 
