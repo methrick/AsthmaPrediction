@@ -150,16 +150,16 @@ class SVMModel:
                 #     print('Changing Learning Rate to ' + str(learning_rate) + ' Iteration =  ' + str(i))
 
                 self.sess.run(train_step,
-                              feed_dict=***REMOVED***x_data: rand_x, y_target: rand_y, learning_rate_placeholder: learning_rate***REMOVED***)
-                [temp_loss, log_summary] = self.sess.run([loss, summary], feed_dict=***REMOVED***x_data: rand_x, y_target: rand_y,
+                              feed_dict={x_data: rand_x, y_target: rand_y, learning_rate_placeholder: learning_rate})
+                [temp_loss, log_summary] = self.sess.run([loss, summary], feed_dict={x_data: rand_x, y_target: rand_y,
                                                                                      learning_rate_placeholder: learning_rate,
                                                                                      prediction_grid: rand_x,
-                                                                                     ***REMOVED***)
+                                                                                     })
                 loss_vec.append(temp_loss)
                 training_writer.add_summary(log_summary, i)
-                acc_temp = self.sess.run(accuracy, feed_dict=***REMOVED***x_data: rand_x,
+                acc_temp = self.sess.run(accuracy, feed_dict={x_data: rand_x,
                                                               y_target: rand_y,
-                                                              prediction_grid: rand_x***REMOVED***)
+                                                              prediction_grid: rand_x})
                 batch_accuracy.append(acc_temp)
 
                 if (i + 1) % 10 == 0:
@@ -182,18 +182,18 @@ class SVMModel:
         plt.ylabel('Loss')
         plt.show()
         # data_val = np.concatenate([self.x_vals[0].reshape(1, -1),np.random.uniform(low=-1.0, high=1, size=(1, 960))],axis=0)
-        # [evaluations] = self.sess.run(prediction_pre, feed_dict=***REMOVED***x_data: self.x_vals,
+        # [evaluations] = self.sess.run(prediction_pre, feed_dict={x_data: self.x_vals,
         #                                                          y_target: np.transpose([self.y_vals]),
-        #                                                          prediction_grid_input: data_val***REMOVED***)
+        #                                                          prediction_grid_input: data_val})
 
         model_builder = tf.saved_model.builder.SavedModelBuilder(self.production_path + "exported_model")
 
-        inputs = ***REMOVED***
+        inputs = {
             'input': tf.saved_model.utils.build_tensor_info(prediction_grid_input)
-        ***REMOVED***
-        outputs = ***REMOVED***
+        }
+        outputs = {
             'earnings': tf.saved_model.utils.build_tensor_info(prediction_pre)
-        ***REMOVED***
+        }
 
         signature_def = tf.saved_model.signature_def_utils.build_signature_def(
             inputs=inputs,
@@ -204,9 +204,9 @@ class SVMModel:
         model_builder.add_meta_graph_and_variables(
             self.sess,
             tags=[tf.saved_model.tag_constants.SERVING],
-            signature_def_map=***REMOVED***
+            signature_def_map={
                 tf.saved_model.signature_constants.DEFAULT_SERVING_SIGNATURE_DEF_KEY: signature_def
-            ***REMOVED***
+            }
         )
 
         model_builder.save()

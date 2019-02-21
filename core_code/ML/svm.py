@@ -89,14 +89,14 @@ for i in range(1000):
     rand_index = np.random.choice(len(x_vals), size=batch_size)
     rand_x = x_vals[rand_index]
     rand_y = np.transpose([y_vals[rand_index]])
-    sess.run(train_step, feed_dict=***REMOVED***x_data: rand_x, y_target: rand_y***REMOVED***)
+    sess.run(train_step, feed_dict={x_data: rand_x, y_target: rand_y})
 
-    temp_loss = sess.run(loss, feed_dict=***REMOVED***x_data: rand_x, y_target: rand_y***REMOVED***)
+    temp_loss = sess.run(loss, feed_dict={x_data: rand_x, y_target: rand_y})
     loss_vec.append(temp_loss)
 
-    acc_temp = sess.run(accuracy, feed_dict=***REMOVED***x_data: rand_x,
+    acc_temp = sess.run(accuracy, feed_dict={x_data: rand_x,
                                              y_target: rand_y,
-                                             prediction_grid: rand_x***REMOVED***)
+                                             prediction_grid: rand_x})
     batch_accuracy.append(acc_temp)
 
     if (i + 1) % 250 == 0:
@@ -109,9 +109,9 @@ y_min, y_max = x_vals[:, 1].min() - 1, x_vals[:, 1].max() + 1
 xx, yy = np.meshgrid(np.arange(x_min, x_max, 0.02),
                      np.arange(y_min, y_max, 0.02))
 grid_points = np.c_[xx.ravel(), yy.ravel()]
-[grid_predictions] = sess.run(prediction, feed_dict=***REMOVED***x_data: rand_x,
+[grid_predictions] = sess.run(prediction, feed_dict={x_data: rand_x,
                                                      y_target: rand_y,
-                                                     prediction_grid: grid_points***REMOVED***)
+                                                     prediction_grid: grid_points})
 grid_predictions = grid_predictions.reshape(xx.shape)
 
 # Plot points and grid
@@ -150,9 +150,9 @@ new_points = np.array([(-0.75, -0.75),
                        (0.5, 0.5),
                        (0.75, 0.75)])
 
-[evaluations] = sess.run(prediction, feed_dict=***REMOVED***x_data: x_vals,
+[evaluations] = sess.run(prediction, feed_dict={x_data: x_vals,
                                                 y_target: np.transpose([y_vals]),
-                                                prediction_grid: new_points***REMOVED***)
+                                                prediction_grid: new_points})
 
 for ix, p in enumerate(new_points):
-    print('***REMOVED******REMOVED*** : class=***REMOVED******REMOVED***'.format(p, evaluations[ix]))
+    print('{} : class={}'.format(p, evaluations[ix]))

@@ -166,10 +166,10 @@ class AsthmaAnalyzer(object):
         duration_audio_file = self.audio_duration
         final_ASE = self.final_ASE
         final_TI = self.final_Ti
-        return ***REMOVED***
+        return {
             "frequency_audio_file": frequency_audio_file,
             "number_of_frames": number_of_frames,
             "duration_audio_file": duration_audio_file,
             "final_ASE": final_ASE,
             "final_TI": final_TI,
-        ***REMOVED***
+        }

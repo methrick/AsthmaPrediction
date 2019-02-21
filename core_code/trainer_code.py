@@ -19,7 +19,7 @@ from sshtunnel import SSHTunnelForwarder
 
 def get_datasets():
     db = connect_db()
-    all_records = db.records.find(***REMOVED******REMOVED***)
+    all_records = db.records.find({})
     labels = []
     breath_features = []
     for single_record in all_records:

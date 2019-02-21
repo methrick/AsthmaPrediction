@@ -49,7 +49,7 @@ def get_breath_features_cb(audio_file_name, audio_file_path):
 
 def save_each_sample(cb):
     is_training = False
-    data = "***REMOVED***\"label\":\"normal\",\"data_type\":\"training\",\"breath_files\":[***REMOVED***\"file_name\":\"normal-training-audio[0]-1526170690677.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[0]-1526170690677.wav\"***REMOVED***,***REMOVED***\"file_name\":\"normal-training-audio[1]-1526170690703.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[1]-1526170690703.wav\"***REMOVED***,***REMOVED***\"file_name\":\"normal-training-audio[2]-1526170690709.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[2]-1526170690709.wav\"***REMOVED***]***REMOVED***"
+    data = "{\"label\":\"normal\",\"data_type\":\"training\",\"breath_files\":[{\"file_name\":\"normal-training-audio[0]-1526170690677.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[0]-1526170690677.wav\"},{\"file_name\":\"normal-training-audio[1]-1526170690703.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[1]-1526170690703.wav\"},{\"file_name\":\"normal-training-audio[2]-1526170690709.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[2]-1526170690709.wav\"}]}"
     #if len(sys.argv) < 2:
         #raise Exception('No argument sent')
     #data = sys.argv[1]
@@ -79,20 +79,20 @@ def save_each_sample(cb):
 
             ASE, Ti, energy, number_of_rows, phase, power, selected_data = cb(audio_file_name, audio_file_path)
             db = client[os.getenv('DB_DATABASE')]
-            current_record = ***REMOVED***
+            current_record = {
                 'is_urgent': -1,
                 'is_urgent_label': is_urgent_label,
                 'type_of_record': data_type,
                 'wav_file_path': audio_file_path,
-                'features': ***REMOVED***
+                'features': {
                     'ASE': json.dumps(ASE.tolist()),
                     'Ti': json.dumps(Ti.tolist()),
                     'Energy': json.dumps(energy.tolist()),
                     'Phase': json.dumps(phase.tolist()),
                     'Power': json.dumps(power.tolist()),
-                ***REMOVED***,
+                },
                 'created_at': time.time(),
-            ***REMOVED***
+            }
             current_record_id = db.records.insert_one(current_record).inserted_id
 
 

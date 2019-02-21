@@ -46,8 +46,8 @@ for i in range(1000):
     rand_x2 = np.array([[x[1]] for x in rand_x])  # petal width data input
     rand_y = np.array([[y] for y in binary_target[rand_index]])  # Targets
     # we Send all the placeholders
-    sess.run(train_step, feed_dict=***REMOVED***x1_data: rand_x1, x2_data:
-        rand_x2, y_target: rand_y***REMOVED***)
+    sess.run(train_step, feed_dict={x1_data: rand_x1, x2_data:
+        rand_x2, y_target: rand_y})
     if (i + 1) % 200 == 0:
         print('Step #' + str(i + 1) + ' A = ' + str(sess.run(A)) + ', b = ' + str(sess.run(b)))
 

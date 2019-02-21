@@ -45,7 +45,7 @@ def init():
     # print("\n Start Time  = " + str(start) + "\n")
     # Steps
     # FE of the sample
-    # data = "***REMOVED***\"label\":\"normal\",\"data_type\":\"training\",\"breath_files\":[***REMOVED***\"file_name\":\"normal-training-audio[0]-1526170690677.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[0]-1526170690677.wav\"***REMOVED***,***REMOVED***\"file_name\":\"normal-training-audio[1]-1526170690703.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[1]-1526170690703.wav\"***REMOVED***,***REMOVED***\"file_name\":\"normal-training-audio[2]-1526170690709.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[2]-1526170690709.wav\"***REMOVED***]***REMOVED***"
+    # data = "{\"label\":\"normal\",\"data_type\":\"training\",\"breath_files\":[{\"file_name\":\"normal-training-audio[0]-1526170690677.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[0]-1526170690677.wav\"},{\"file_name\":\"normal-training-audio[1]-1526170690703.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[1]-1526170690703.wav\"},{\"file_name\":\"normal-training-audio[2]-1526170690709.wav\",\"file_path\":\"/Users/JasemAl-sadi/WebstormProjects/asthma/samples/normal-training-audio[2]-1526170690709.wav\"}]}"
     if len(sys.argv) < 2:
         raise Exception('No argument sent')
     data = sys.argv[1]
@@ -54,7 +54,7 @@ def init():
         raise Exception('No Breath sound file path sent, it should be as  with name breath_file')
     breath_record = data.breath_file
     if not hasattr(breath_record, 'file_name') or not hasattr(breath_record, 'file_path'):
-        raise Exception('The breath file  has not  file_name or file_path attribute ***REMOVED******REMOVED*** '.format(breath_record))
+        raise Exception('The breath file  has not  file_name or file_path attribute {} '.format(breath_record))
     audio_file_name = breath_record.file_name
     audio_file_path = breath_record.file_path
     ASE, Ti, energy, number_of_rows, phase, power, selected_data = get_breath_features_cb(audio_file_name,
@@ -75,12 +75,12 @@ def init():
     # Return the result to the node js normal=0/wheeze=1
     End = time.time()
     elapsed = End - start
-    data_to_be_sent = ***REMOVED***
+    data_to_be_sent = {
         'start_time': start,
         'end_time': End,
         'difference_time': elapsed,
         'is_urgent': is_urgent,
-    ***REMOVED***
+    }
     data_to_be_sent_json = json.dumps(data_to_be_sent)
 
     print(data_to_be_sent_json)
@@ -89,20 +89,20 @@ def init():
 
 
 def save_to_db(ASE, Ti, audio_file_path, data_type, energy, is_urgent, is_urgent_label, phase, power):
-    current_record = ***REMOVED***
+    current_record = {
         'is_urgent': is_urgent,
         'is_urgent_label': is_urgent_label,
         'type_of_record': data_type,
         'wav_file_path': audio_file_path,
-        'features': ***REMOVED***
+        'features': {
             'ASE': json.dumps(ASE.tolist()),
             'Ti': json.dumps(Ti.tolist()),
             'Energy': json.dumps(energy.tolist()),
             'Phase': json.dumps(phase.tolist()),
             'Power': json.dumps(power.tolist()),
-        ***REMOVED***,
+        },
         'created_at': time.time(),
-    ***REMOVED***
+    }
     db = set_up_db()
     db.records.insert_one(current_record).inserted_id
 

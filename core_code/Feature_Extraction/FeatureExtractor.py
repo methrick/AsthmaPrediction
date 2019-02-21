@@ -34,7 +34,7 @@ class FeatureExtractor:
     final_ASE_val: float = 0
     final_Ti_val: float = 0
     current_iteration = 0
-    signal_cache_data = ***REMOVED***
+    signal_cache_data = {
         'x_m_arr': [],
         'x_m_k_arr': [],
         'r_m_k_arr': [],
@@ -44,7 +44,7 @@ class FeatureExtractor:
         'unpredict_spectrum_arr': [],
         'ASE_arr': [],
         'Ti_arr': [],
-    ***REMOVED***
+    }
 
     def __init__(self, input_signal, signal_length, fs_signal, start_time, end_time, signal_index, audio_id):
         self.setup_signal_data(end_time, fs_signal, input_signal, signal_index, signal_length, start_time, audio_id)
@@ -251,7 +251,7 @@ class FeatureExtractor:
         self.signal_cache_data['r_m_k_arr'][current_iteration, :] = r_m_k
 
     def get_cache_obj(self):
-        return ***REMOVED***
+        return {
             'number_of_segments': self.number_of_frames,
             'frame_index': self.signal_index,
             'frame_length': self.input_signal.size,
@@ -265,4 +265,4 @@ class FeatureExtractor:
             'final_ASE': self.final_ASE_val,
             'final_TI': self.final_Ti_val,
             'audio_fk_id': self.audio_id,
-        ***REMOVED***
+        }
